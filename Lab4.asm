@@ -80,16 +80,15 @@ main:
     endInpForLoop:
     li $t1, 1
     la $t2, array
-
-    #t0: n, t1 : i, t2: base address
-    #t3: sum, t4: min, t5: max
-    #t6: num even, t7: num odd
     li $t3, 0
     lw $t4, 0($t2)
     lw $t5, 0($t2)
     li $t6, 0
     li $t7, 0
 
+    #t0: n, t1 : i, t2: base address
+    #t3: sum, t4: min, t5: max
+    #t6: num even, t7: num odd
     outForLoop:
         li $v0, 1
         lw $t8, 0($t2) # t8 = a[i]
